@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url(../media/Umbreon.webp);
+}
+.carrito{
+    width: 44px;
+    height: 44px;
+    fill: white;
+}
+.inv{
+    color: rgba(240, 248, 255, 0);
+    background-color: rgba(240, 248, 255, 0);
+    border: 0;
+}
+.fondoContador{
+    background-color: rgb(66, 154, 255);
+}
+.fix{
+    width: 44px;
+}
+.juegosCarrito{
+    width: 327px;
+    height: 149px;
+}

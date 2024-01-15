@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Ustore</title>
+</head>
+
+<body>
+    <main>
+        <div class="container my-3 d-flex justify-content-between">
+            <span class="fix"></span>
+            <h2 class="text-white">¡Bienvenido a Ustore!</h2>
+            <button id="carrito" class="inv">
+                <div class="position-relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-bag carrito" viewBox="0 0 16 16">
+                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
+                    </svg>
+                    <span class="text-white badge fondoContador position-absolute translate-middle"
+                        id="contador">0</span>
+                </div>
+            </button>
+        </div>
+        
+        <div class="container d-flex flex-column juegos bg-dark bg-opacity-75 text-white">
+            <div class="my-4 mt-5 d-flex justify-content-start">
+                <img class="ms-5" src="./media/Hades.jpg" alt="">
+                <div class="ms-4">
+                    <h3>Hades</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae assumenda,
+                        veritatis voluptas expedita at obcaecati eaque ea blanditiis ratione omnis. Itaque aperiam illum
+                        veritatis velit at tempore, aspernatur, adipisci quis unde minima delectus vitae suscipit
+                        corrupti tempora quod debitis. Debitis laboriosam repellat voluptas, reprehenderit ipsam
+                        inventore distinctio officia suscipit.</p>
+                    <button class="btn btn-primary" id="hades" value="1">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="my-4 mt-5 d-flex justify-content-start">
+                <img class="ms-5" src="./media/GodofWar.jpg" alt="">
+                <div class="ms-4">
+                    <h3>God Of War</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae assumenda,
+                        veritatis voluptas expedita at obcaecati eaque ea blanditiis ratione omnis. Itaque aperiam illum
+                        veritatis velit at tempore, aspernatur, adipisci quis unde minima delectus vitae suscipit
+                        corrupti tempora quod debitis. Debitis laboriosam repellat voluptas, reprehenderit ipsam
+                        inventore distinctio officia suscipit.</p>
+                    <button class="btn btn-primary" id="godOfWar" value="5">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="my-4 mt-5 d-flex justify-content-start">
+                <img class="ms-5" src="./media/Persona 5.jpg" alt="">
+                <div class="ms-4">
+                    <h3>Persona 5 Royal</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae assumenda,
+                        veritatis voluptas expedita at obcaecati eaque ea blanditiis ratione omnis. Itaque aperiam illum
+                        veritatis velit at tempore, aspernatur, adipisci quis unde minima delectus vitae suscipit
+                        corrupti tempora quod debitis. Debitis laboriosam repellat voluptas, reprehenderit ipsam
+                        inventore distinctio officia suscipit.</p>
+                    <button class="btn btn-primary" id="persona5" value="0">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="my-4 mt-5 d-flex justify-content-start">
+                <img class="ms-5" src="./media/stardew.jpg" alt="">
+                <div class="ms-4">
+                    <h3>Stardew Valley</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur recusandae assumenda,
+                        veritatis voluptas expedita at obcaecati eaque ea blanditiis ratione omnis. Itaque aperiam illum
+                        veritatis velit at tempore, aspernatur, adipisci quis unde minima delectus vitae suscipit
+                        corrupti tempora quod debitis. Debitis laboriosam repellat voluptas, reprehenderit ipsam
+                        inventore distinctio officia suscipit.</p>
+                    <button class="btn btn-primary" id="stardew" value="4">Añadir al carrito</button>
+                </div>
+            </div>
+            
+            <section class="my-3">
+                <div class="my-4">
+                <h2 class="text-center">Tus juegos 🛒</h2>
+                </div>
+                <table class="table table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Imagen</th>
+                            <th>Juego</th>
+                            <th>Genero</th>
+                            <th>Precio</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="items">
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+    <script src="./juego.js"></script>
+    <script src="./appreal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
